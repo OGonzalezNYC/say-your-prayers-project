@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <title>Say Your Prayers</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Say Your Prayers</h1>
+    <div id="new-prayer-container">
+      <form id="new-prayer-form">
+        Title:  <input type="text" id="new-prayer-title" />
+        <br><br>
+        Prayer:  <input type="text" id="new-prayer-body"/>
+        <br><br>
+        <!-- Name:  <input type="text" id="new-prayer-user-name" />
+        <br><br>
+        Password:  <input type="text" id="new-prayer-user-password" />
+        <br> -->
+        <input type="submit" id="new-prayer-submit-button"/>
+      </form>
+    </div>
+      <ul id="prayers-container">
+          <!-- Each prayer must show a Title, a Body, a UserName, an outcome (empty or full), an Amen button, the number of Amens, and a button for adding an outcome.  -->
+      </ul>
+  </div>
+  <script type="text/javascript" src="src/components/prayers.js"></script>
+  <script type="text/javascript" src="src/components/prayer.js"></script>
+  <script src="src/components/app.js"></script>
+  <script src="src/adapters/PrayersAdapter.js"></script>
+  <script src="src/index.js"></script>
+
+
+
+
+
+
+</body>
+</html>
