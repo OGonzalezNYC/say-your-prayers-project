@@ -3,11 +3,13 @@ class Prayers {
   constructor() {
     this.prayers = [];
     this.adapter = new PrayersAdapter();
-    // this.bindEventListeners();
+    this.initBindingsAndEventListeners();
     this.fetchAndLoadPrayers(); //with this "()", the instantiation of a new instance of the Prayers class doesn't merely ENDOW the instance with this function; it actually CALLS the function, fetchAndLoadPrayers, which is defined below.
   }
 
-
+  initBindingsAndEventListeners() {
+    this.prayersContainer = document.getElementById("prayers-container");
+  }
 
   fetchAndLoadPrayers() {
     this.adapter
@@ -28,13 +30,13 @@ class Prayers {
     //console.log('rendering...')// The fact that this console.log() works, means
     //console.log(prayersString)// The fact that this console.log() is working means that the array of all prayers is reaching this far.
     //console.log(this.prayers[0])
-    const prayersContainer = document.getElementById("prayers-container");
+    //const prayersContainer = document.getElementById("prayers-container");
     //prayersContainer.innerHTML = 'my prayers here' // The fact that 'my prayers here' successfully
     //populates the "prayers-container" div, means it's all working so far.
 
-    prayersContainer.innerHTML = //this.prayers.map(prayer => `<li>${prayer.title}</li>`).join('')
+    this.prayersContainer.innerHTML = //this.prayers.map(prayer => `<li>${prayer.title}</li>`).join('')
 
-    this.prayers.map(prayer => `<li><div>Title: ${prayer.title}</div><div>Prayer: ${prayer.body}</div><div><input type="submit" value="Amen" class="add-amen-button"/> ${prayer.amens}</div><div>Outcome: ${prayer.outcome}</div><input type="submit" value="Add Outcome" class="add-outcome-button"/></li>`).join('')
+    this.prayers.map(prayer => prayer.renderLi()).join('')
     //Now I'll want to document.getElementsByClassName("add-amen-button") and document.getElementsByClassName("add-outcome-button"), and add an eventListener to each one.
 
     //Datasets are for adding id's dynamically.
