@@ -11,25 +11,64 @@
   <title>Say Your Prayers</title>
 </head>
 <body>
+
+
+
   <div class="container">
     <h1>Say Your Prayers</h1>
-    <div id="new-prayer-container">
+
+
+    <div id="registration-container">
+      <form id="registration-form">
+        Register As a NEW Prayer Warrior:
+        <br>
+        Name: <input type="text" id="new-user-username"/>
+        <br><br>
+        Password: <input type="text" id="new-user-password"/>
+        <br><br>
+        <input type="submit" id="new-user-submit"/>
+        <br>
+        <br>
+      </form>
+    </div>
+              OR
+              <br>
+              <br>
+    <div id="login-container">
+      <form id="login-form">
+        Log In As A RETURNING Prayer Warrior:
+        <br>
+        Name: <input type="text" id="login-username"/>
+        <br><br>
+        Password: <input type="text" id="login-password"/>
+        <br><br>
+        <input type="submit" id="login-submit"/>
+        <br><br>
+      </form>
+    </div>
+
+
+
+
+
+    <!-- <div id="new-prayer-container">
       <form id="new-prayer-form">
         Title:  <input type="text" id="new-prayer-title" />
         <br><br>
         Prayer:  <input type="text" id="new-prayer-body"/>
         <br><br>
-        <!-- Name:  <input type="text" id="new-prayer-user-name" />
-        <br><br>
-        Password:  <input type="text" id="new-prayer-user-password" />
-        <br> -->
         <input type="submit" id="new-prayer-submit-button"/>
       </form>
     </div>
-      <ul id="prayers-container">
-          <!-- Each prayer must show a Title, a Body, a UserName, an outcome (empty or full), an Amen button, the number of Amens, and a button for adding an outcome.  -->
-      </ul>
+      <ul id="prayers-container"> -->
+
+      <!-- </ul> -->
   </div>
+
+
+
+
+
   <script type="text/javascript" src="src/components/prayers.js"></script>
   <script type="text/javascript" src="src/components/prayer.js"></script>
   <script src="src/components/app.js"></script>

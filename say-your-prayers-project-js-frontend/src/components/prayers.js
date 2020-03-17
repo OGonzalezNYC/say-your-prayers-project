@@ -5,8 +5,7 @@ class Prayers {
     this.adapter = new PrayersAdapter();
     // this.bindEventListeners();
     this.fetchAndLoadPrayers(); //with this "()", the instantiation of a new instance of the Prayers class doesn't merely ENDOW the instance with this function; it actually CALLS the function, fetchAndLoadPrayers, which is defined below.
-  }// This simply creates a new instance of App, which will only instantiate a new instance of the Prayers class.
-  const app = new App();
+  }
 
 
 
@@ -28,7 +27,7 @@ class Prayers {
     //const prayersString = this.prayers.map(prayer => `<li>${prayer.title}</li>`).join('')
     //console.log('rendering...')// The fact that this console.log() works, means
     //console.log(prayersString)// The fact that this console.log() is working means that the array of all prayers is reaching this far.
-    console.log(this.prayers[0])
+    //console.log(this.prayers[0])
     const prayersContainer = document.getElementById("prayers-container");
     //prayersContainer.innerHTML = 'my prayers here' // The fact that 'my prayers here' successfully
     //populates the "prayers-container" div, means it's all working so far.

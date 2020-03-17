@@ -24,7 +24,7 @@ class ApplicationController < ActionController::API
   def decoded_token#(does NOT take an argument of token)
     # example: # token => "eyJhbGciOiJIUzI1NiJ9.eyJiZWVmIjoic3RlYWsifQ._IBTHTLGX35ZJWTCcY30tLmwU9arwdpNVxtVU0NpAuI"
     if auth_header # the function immediately above this one.
-      # auth_header has returned the string, 'Bearer <token>', which was value of the 'Authorization' (and only) key in the request.headers object, { 'Authorization': 'Bearer <token>' }.
+      # auth_header has returned the string, 'Bearer <token>', which was value of the 'Authorization' (, the only) key in the request.headers object, { 'Authorization': 'Bearer <token>' }.
       token = auth_header.split(" ")[1] # Turns the string 'Bearer <token>' into an array of strings, ["Bearer", "<token>"], and returns the second element in that array.
       begin # From the Ruby docs for the BEGIN keyword: BEGIN : Designates, via code block, code to be executed unconditionally before sequential execution of the program begins. Sometimes used to simulate forward references to methods.
         JWT.decode(token, 'mys3cr3t', true, algorithm: 'HS256')
