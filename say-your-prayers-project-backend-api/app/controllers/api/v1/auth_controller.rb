@@ -1,5 +1,5 @@
 class Api::V1::AuthController < ApplicationController
-  #skip_before_action :authorized, only: [:create]
+  skip_before_action :authorized, only: [:create]
 
   def create
     @user = User.find_by(username: user_login_params[:username]) # The return value will be nil if that user can't be found, in which case the second conditional in the following line won't even be reached, which will prevent the NoMethodError that would otherwise result from "authenticate" being an undefined method for nil:nilClass.
