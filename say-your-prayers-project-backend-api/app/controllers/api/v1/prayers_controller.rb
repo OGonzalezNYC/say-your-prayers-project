@@ -1,4 +1,5 @@
 class Api::V1::PrayersController < ApplicationController
+  skip_before_action :authorized
 # May want to consider running "rails g serializer prayer".  Might I also need one for the plural, i.e., "rails g serializer prayers"?
 #In the tutorial, the two consecutive commands were "rails g controller api/v1/users" (plural) and "rails g serializer user" (singular).
   def index
