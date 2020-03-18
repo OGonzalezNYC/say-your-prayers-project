@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-  skip_before_action :authorized, only: [:create]
+  #skip_before_action :authorized, only: [:create]
   # Allows the User#create method to skip the "before_action :authorized" coming from the ApplicationController; otherwise, the "Application#authorized" method would be run, and, with nobody logged in, it would lock down the whole app before a  user could even be created.
   def profile # bear in mind that Application Controller calls #authorized before any other controller methods are called. So if authorization fails, #profile will never be called; instead there will be: "render json: {message: 'Please log in'}, status: unauthorized".
     # THAT'S IT FOR THE SERVER!
